@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    background-color:transparent;
+}
+
+nav {
+    display: none;
+    margin-top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav .menu li {
+    position: relative;
+}
+
+header {
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.cor2 {
+    background-color: #000;
+    color: #fff;
+}
+
+header > .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+}
+
+header .cabecalho {
+    justify-content: space-around;
+}
+
+header img {
+    width: 180px;
+    margin-left: 10px;
+}
+
+form input {
+    border: 2px solid #1090b8;
+    border-radius: 4px;
+    padding: 6px;
+    font-weight: bold;
+}
+
+input:focus {
+    outline-color: #1090b8;
+}
+
+form button {
+    border-radius: 4px;
+    border: none;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #1090b8;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+#black:hover {
+    background-color: #000;
+}
+
+#black:hover {
+    color: #fff;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+#nov:hover {
+    background-color: #1090b8;
+    color: #fff;
+}
+
+#pro:hover {
+    background-color: #1090b8;
+    color: #fff;
+}
+
+.submenu {
+    display: none;
+    border: 2px solid #1090b8;
+    background-color: #fff;
+    position: absolute;
+    list-style-type: none;
+    font-size: 1em;
+    width: 300px;
+    top: 100%;
+}
+
+.submenu li {
+    display: block;
+    margin: 8px;
+    padding: 8px;
+    color: #000;
+}
+
+.menu h2 {
+    margin: 2px 10px;
+}
+
+.menu > li {
+    border-top: 4px solid transparent;
+    font-size: 1em;
+    float: left;
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.menu li:hover {
+    border-color: #1090b8;
+}
+
+.loja img {
+    max-width: 600px;
+    width: 100%;
+}
+
+.loja {
+    display: flex;
+    padding: 15px ;
+    max-width: 100%;
+    width: 100%;
+}
+
+.loja h2 {
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.loja p, .loja h2 {
+    margin: 15px;
+}
+
+.margin {
+    border-bottom: 2px solid #ccc;
+    max-width: 100%;
+    width: 100%;
+}
+
+.noticia img {
+    max-width: 100%; 
+    width: 100%;
+    margin-top: 25px;
+}
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    column-gap: 5%;
+    row-gap: 10%;
+}
+
+a .string h2{
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-decoration: underline;
+    font-size: 1.5em;
+    font-style: italic;
+    background-color: #000;
+    color: #fff;
+}
+
+.action {
+    border-bottom: 2px solid #ccc;
+}
+
+footer {
+    padding: 30px;
+    background-color: #000;
+}
+
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#carousel-imagens img{
+    max-width: 100%;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.string button {
+    padding: 6px;
+    background-color: #1090b8;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+#botaocentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botaocentro button {
+    max-width: 100%;
+    width: 100%;
+}
+
+#botaocentro button:hover {
+    background-color: green;
+}
+
+footer {
+    color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+
+    header .container {
+        display: block;
+        max-width: 90%;
+    }
+
+    .menu-hamburguer {
+        margin-top: 15px;
+    }
+
+    .submenu {
+        display: none;
+        border: 2px solid #1090b8;
+        background-color: #fff;
+        position: absolute;
+        list-style-type: none;
+        font-size: 1em;
+        width: 150px;
+        top: 100%;
+    }
+
+    nav {
+        position: relative;
+        font-size: 15px;
+    }
+
+    header {
+        position: inherit;
+    }
+
+    .loja {
+        display: block;
+    }
+
+    .loja img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .figure {
+        padding: 16px;
+    }
+
+    .noticias {
+        display: block;
+    }
+}
+
+@media screen and (orientation:landscape) and (max-width: 767px){
+    .figure{
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    header .container {
+        display: block;
+        max-width: 90%;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        max-width: 90%;
+    }
+
+    .menu-hamburguer {
+        margin-top: 15px;
+    }
+    
+    .submenu {
+        display: none;
+        border: 2px solid #1090b8;
+        background-color: #fff;
+        position: absolute;
+        list-style-type: none;
+        font-size: 1em;
+        width: 150px;
+        top: 100%;
+    }
+    
+    nav {
+        position: relative;
+        font-size: 15px;
+    }
+
+    nav h2 {
+        font-size: 30px;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+    
+    header {
+        position: inherit;
+    }
+    
+    .loja {
+        display: block;
+    }
+    
+    .loja img {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .figure {
+        padding: 16px;
+    }
+    
+    .noticias {
+        display: block;
+    }
+
+    .string {
+        font-size: 25px;
+    }
+
+    #botaocentro button {
+        font-size: 35px;
+    }
+}
