@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Avançado</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+<!-- Css -->
+    <style>
+        body{
+            background-color: #3a3737;
+        }
+        .card-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .fogo h4,
+        .fogo time {
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+        .fogo2 {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        section {
+            padding: 10px;
+            margin-bottom: 100px;
+        }
+        section h2 {
+            color: #fff;
+            margin-bottom: 5vh;
+        }
+        .nav-link {
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Modal(PopUp) - Toast -->
+    <div>
+        <button class="btn btn-success m-3" data-bs-toggle="modal" data-bs-target="#modal1">
+            Abrir Lembrete Diario
+        </button>
+        <div class="modal" id="modal1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Importante!</h5>
+                        <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Clicando no botão você está fazendo uma promessa com voce mesmo!<br>
+                            De que voce vai ser feliz de hoje em diante!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceito</button>
+                        <div class="buttonToast">
+                            <button id="btn-checar-toast" class="btn btn-warning" type="button">Checar elogio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- carousel -->
+    <div class="container w-75 ">
+        <div id="carousel-inicial" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2023/03/10/17/06/girl-7842780_960_720.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2022/11/22/02/29/beach-7608602_960_720.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2023/01/18/14/39/family-7727035_960_720.jpg" class="d-block w-100">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-inicial" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-inicial" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-inicial" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-inicial" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-inicial" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+<!-- Noticias -- Card --Abas -->
+    <section>
+        <h2>Temas:</h2>
+        <div class="container">
+            <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Sorrisos</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Doguinhos</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Nenens</button>
+            </nav>
+            <div class="tab-content">
+                <div class="tab-pane active" id="aba1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 mt-3">
+                                <div class="container g-0 mt-3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://www.saudeemdia.com.br/wp-content/uploads/2022/10/sorrir-1.jpg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Sorrir melhora o bem-estar emocional</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://media-manager.noticiasaominuto.com.br/1920/1461882352/naom_5721d49d77bee.jpg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>O dia mundial do sorriso</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://www.univates.br/noticia/imagens?imagem=22211/-1517501335.642_300_300.jpg&width=1903" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Seu sorriso pode mudar o dia de alguem</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://www.univates.br/noticia/imagens?imagem=22211/-1517501335.3094_300_300.jpg&width=795" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Alegria em hospitais</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="col-md-3 d-flex justify-content-center mt-5">
+                                <article class="card">
+                                    <header class="card-header">
+                                        ANUNCIANTES
+                                    </header>
+                                    <img src="https://64.media.tumblr.com/tumblr_m8ngdv1wl21rvoidmo1_500.jpg" class="w-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">O melhor sorriso</h4>
+                                        <p class="card-text">Compre o melhor sorriso aqui:<br>Só: 12x de R$ 0,00<br>(Você já tem o melhor sorriso)</p>
+                                        <a href="#" class="btn btn-primary">Comprar</a>
+                                    </div>
+                                    <footer class="card-footer">
+                                        Postado em <time>28/03/2023</time>
+                                    </footer>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="aba2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 mt-3">
+                                <div class="container g-0 mt-3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://d281e75zdqqlon.cloudfront.net/media/wp-content/uploads/2023/02/doceis.jpg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>As 6 raças de cachorros mais dóceis para crianças</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://i0.statig.com.br/bancodeimagens/0r/xl/db/0rxldbiarurmcujvvxwntivo9.jpg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Pelúcia para cachorros</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://s2.glbimg.com/ndNXAnZpo8BxpqwP4tyDl2a822o=/0x0:1009x757/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/i/X/D3saUjRKG1pVCQ65AWZg/whatsapp-image-2023-03-15-at-07.59.19.jpeg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>'Creche' para cães tem brincadeiras, aulas de obediência e até soneca no fim do dia</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://static3.tcdn.com.br/img/img_prod/460977/fantasia_chucky_dog_roupa_para_cachorro_cosplay_good_dog_ev_80089_1_3fce6a60201fac3ec0b6250217240694.jpeg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Bloquinho Pet tem cãocurso de fantasias</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="col-md-3 d-flex justify-content-center mt-5">
+                                <article class="card">
+                                    <header class="card-header">
+                                        DOGUINHO
+                                    </header>
+                                    <img src="https://images.tcdn.com.br/img/img_prod/629332/fantasia_para_cachorro_batman_licenciado_691_1_20190529091440.jpg?1680033024" class="w-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Fala serio OLHA ISSO</h4>
+                                        <p class="card-text">BAT-DOG<br>Defensor de todos os ossos escondidos<br>Ele é a noite<br>Sinta o terror em seus olhos</p>
+                                        <a href="#" class="btn btn-primary">Quero 2</a>
+                                    </div>
+                                    <footer class="card-footer">
+                                        Postado em <time>28/03/2023</time>
+                                    </footer>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="aba3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 mt-3">
+                                <div class="container g-0 mt-3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://www.rbsdirect.com.br/filestore/1/9/6/4/8/5/4_a8d750521e6c002/4584691_e68ec1a0e0fde3e.jpg?w=700" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Nenens participam de ensaio fotográfico</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://super.abril.com.br/wp-content/uploads/2016/12/4739608314_915a8aa5b8_b.jpg?quality=70&strip=all" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Bebês são imunes ao “bocejo contagioso”</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://claudia.abril.com.br/wp-content/uploads/2016/10/bebe-prematuro-sorrindo.jpg?quality=85&strip=info&w=640&h=640&crop=1" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>O sorrisão deste bebê prematuro de 5 dias de vida vai alegrar seu dia</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 post">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="https://www.melpoejo.com.br/wp-content/uploads/2020/06/massagens-para-gases-em-beb%C3%AA.jpg" class="w-100">
+                                            </div>
+                                            <div class="fogo">
+                                                <h4>Massagens para bebês: Alívio nos Nenens</h4>
+                                                <time>29/03/2023</time>
+                                                <div class="fogo2">
+                                                    <a class="btn btn-primary btn-sm">Leia Mais</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="col-md-3 d-flex justify-content-center mt-5">
+                                <article class="card">
+                                    <header class="card-header">
+                                        JUSTICEIRO
+                                    </header>
+                                    <img src="https://cf.shopee.com.br/file/5a1e6a3f59fc3f4c90af85b40c02f005" class="w-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title">O PARCEIRO DA NOITE</h4>
+                                        <p class="card-text">O ajudante do BAT-DOG<br>Não se deixe enganar pelo sorriso<br>Ele busca vingança<br>Você deve estar se perguntando?<br>"Não era pra ser o Robin?<br>É um nenem de batman poxa...nada importa</p>
+                                        <a href="#" class="btn btn-primary">NADA MESMO</a>
+                                    </div>
+                                    <footer class="card-footer">
+                                        Postado em <time>28/03/2023</time>
+                                    </footer>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="mensagem-toast">
+            <header class="toast-header">
+                <strong>IMPORTANTISSIMO</strong>
+            </header>
+            <div class="toast-body">
+                Só pra você lembrar que você está um <br>ESPETACULO hoje.<br>
+                Volte sempre pra escutar que você <br>É UM ESPETACULO TODOS OS DIAS!
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-success" type="button">SOU MESMO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script>
+        //Modal
+        document.addEventListener("DOMContentLoaded", function(){
+            const modalModal = new bootstrap.Modal("#modal1")
+            setTimeout(function(){
+                modalModal.show()
+            })
+        })
+
+        //Toast
+        const ativadorToast = document.getElementById("btn-checar-toast")
+        const mensagem = document.getElementById("mensagem-toast")
+
+        if (ativadorToast) {
+            ativadorToast.addEventListener("click", function(){
+                const toast = new bootstrap.Toast(mensagem)
+                toast.show()
+            })
+        }
+    </script>
+
+
+
+</body>
+</html>
